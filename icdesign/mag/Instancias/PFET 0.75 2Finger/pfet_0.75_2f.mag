@@ -1,0 +1,9 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1647032121
+use sky130_fd_pr__pfet_01v8_52C9FB  sky130_fd_pr__pfet_01v8_52C9FB_0
+timestamp 1647032121
+transform 1 0 161 0 1 175
+box -161 -175 161 175
+<< end >>

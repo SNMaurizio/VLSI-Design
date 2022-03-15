@@ -1,0 +1,24 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1647022399
+<< poly >>
+rect 252 270 282 631
+<< metal1 >>
+rect 99 670 146 923
+rect 198 100 249 805
+rect 292 670 339 923
+rect 290 8 332 242
+use 5umcell_template  5umcell_template_0
+timestamp 1647017803
+transform 1 0 4 0 1 -20
+box -4 16 604 1000
+use pfet_075_2f  pfet_075_2f_0
+timestamp 1647012418
+transform 1 0 878 0 1 7
+box -820 555 -498 905
+use sky130_fd_pr__nfet_01v8_SJ5Z6H  sky130_fd_pr__nfet_01v8_SJ5Z6H_0
+timestamp 1647014968
+transform 1 0 267 0 1 169
+box -73 -101 73 101
+<< end >>
