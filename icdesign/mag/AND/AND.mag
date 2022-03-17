@@ -1,52 +1,25 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1647024612
-<< nwell >>
-rect -60 720 -20 1220
-rect 580 720 620 1220
-<< poly >>
-rect 38 542 68 890
-rect 492 544 522 888
-<< metal1 >>
-rect -14 1124 70 1172
-rect -14 914 24 1124
-rect 82 882 120 1052
-rect 178 914 216 1162
-rect 344 914 382 1162
-rect 486 1124 574 1172
-rect 440 882 478 1052
-rect 536 914 574 1124
-rect 82 850 478 882
-rect -16 348 26 512
-rect 82 386 122 850
-rect 342 560 576 594
-rect 176 484 218 512
-rect 342 484 384 560
-rect 176 436 384 484
-rect 176 348 218 436
-rect 342 382 384 436
-rect -16 314 218 348
-rect 438 260 480 524
-rect 534 382 576 560
-use 5umcell_template  5umcell_template_0
+timestamp 1647559469
+use 5umcell_template  5umcell_template_0 ~/icdesign/mag/Plantilla
 timestamp 1647017803
-transform 1 0 -20 0 1 220
+transform 1 0 4 0 1 -16
 box -4 16 604 1000
-use nfet_075_2f  nfet_075_2f_0
-timestamp 1647019573
-transform 1 0 -8 0 1 292
-box -16 28 234 264
-use nfet_075_2f  nfet_075_2f_1
-timestamp 1647019573
-transform 1 0 350 0 1 292
-box -16 28 234 264
-use pfet_075_2f  pfet_075_2f_0
-timestamp 1647012418
-transform 1 0 760 0 1 255
-box -820 555 -498 905
-use pfet_075_2f  pfet_075_2f_1
-timestamp 1647012418
-transform 1 0 1118 0 1 255
-box -820 555 -498 905
+use nfet_w075_2f  nfet_w075_2f_0 ~/icdesign/mag/NFET_W075_2F
+timestamp 1647552215
+transform 1 0 -1145 0 1 -54
+box 0 32 250 264
+use nfet_w075_2f  nfet_w075_2f_1
+timestamp 1647552215
+transform 1 0 -620 0 1 -51
+box 0 32 250 264
+use pfet_w075_2f  pfet_w075_2f_0 ~/icdesign/mag/PFET_W075_2F
+timestamp 1647552722
+transform 1 0 -574 0 1 565
+box 0 0 322 350
+use pfet_w075_2f  pfet_w075_2f_1
+timestamp 1647552722
+transform 1 0 -1227 0 1 565
+box 0 0 322 350
 << end >>
