@@ -1,0 +1,9 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1647552215
+use sky130_fd_pr__nfet_01v8_XUMWGH  sky130_fd_pr__nfet_01v8_XUMWGH_0
+timestamp 1647552215
+transform 1 0 125 0 1 163
+box -125 -131 125 101
+<< end >>

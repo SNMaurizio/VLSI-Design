@@ -1,0 +1,29 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1648496519
+<< poly >>
+rect 160 274 190 639
+<< metal1 >>
+rect 107 674 147 924
+rect 112 6 150 241
+rect 200 106 244 815
+rect 299 677 339 927
+use 5umcell_template  5umcell_template_0 ~/icdesign/mag/Plantilla
+timestamp 1647017803
+transform 1 0 4 0 1 -16
+box -4 16 604 1000
+use pfet_w075_2f  pfet_w075_2f_0 ~/icdesign/mag/PFET_W075_2F
+timestamp 1647552722
+transform 1 0 62 0 1 570
+box 0 0 322 350
+use sky130_fd_pr__nfet_01v8_NDWVGB  sky130_fd_pr__nfet_01v8_NDWVGB_0
+timestamp 1647553962
+transform 1 0 175 0 1 173
+box -73 -101 73 101
+<< labels >>
+rlabel space 160 248 190 670 1 IN
+rlabel space 200 106 244 820 1 OUT
+rlabel space 98 894 498 930 1 Vdd
+rlabel space 32 6 576 40 1 Vss
+<< end >>
