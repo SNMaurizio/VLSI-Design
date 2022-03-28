@@ -1,9 +1,0 @@
-magic
-tech sky130A
-magscale 1 2
-timestamp 1647552966
-use sky130_fd_pr__pfet_01v8_524U5B  sky130_fd_pr__pfet_01v8_524U5B_0
-timestamp 1647552966
-transform 1 0 257 0 1 175
-box -257 -175 257 175
-<< end >>
