@@ -1,0 +1,53 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1648500469
+<< poly >>
+rect 140 407 170 640
+rect 428 407 458 639
+rect 86 377 170 407
+rect 392 377 458 407
+rect 86 283 116 377
+rect 392 299 422 377
+<< metal1 >>
+rect 87 677 127 933
+rect 179 641 225 813
+rect 279 675 319 931
+rect 372 641 418 813
+rect 470 679 510 935
+rect 179 611 571 641
+rect 32 312 477 342
+rect 32 136 73 312
+rect 129 11 169 281
+rect 224 137 265 312
+rect 338 104 379 280
+rect 436 134 477 312
+rect 532 104 571 611
+rect 338 74 571 104
+use 5umcell_template  5umcell_template_0 ~/icdesign/mag/Plantilla
+timestamp 1647017803
+transform 1 0 4 0 1 -16
+box -4 16 604 1000
+use nfet_w075_2f  nfet_w075_2f_0 ~/icdesign/mag/NFET_W075_2F
+timestamp 1647552215
+transform 1 0 24 0 1 45
+box 0 32 250 264
+use nfet_w075_2f  nfet_w075_2f_1
+timestamp 1647552215
+transform 1 0 330 0 1 45
+box 0 32 250 264
+use pfet_w075_2f  pfet_w075_2f_0 ~/icdesign/mag/PFET_W075_2F
+timestamp 1647552722
+transform 1 0 42 0 1 570
+box 0 0 322 350
+use pfet_w075_2f  pfet_w075_2f_1
+timestamp 1647552722
+transform 1 0 234 0 1 570
+box 0 0 322 350
+<< labels >>
+rlabel space 98 894 498 930 1 Vdd
+rlabel space 32 6 576 40 1 Vss
+rlabel metal1 532 74 571 641 1 OUT
+rlabel space 428 377 458 670 1 A
+rlabel space 140 377 170 670 1 B
+<< end >>
