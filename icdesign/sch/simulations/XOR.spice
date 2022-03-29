@@ -1,0 +1,52 @@
+** sch_path: /home/designer/icdesign/sch//Xor/XOR.sch
+**.subckt XOR Vdd Vss A B OUT
+*.ipin Vdd
+*.ipin Vss
+*.ipin A
+*.ipin B
+*.opin OUT
+XM1 net1 BB Vdd Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.75 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=2 m=2
+XM2 net1 AB Vdd Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.75 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=2 m=2
+XM3 OUT A net1 Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.75 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=2 m=2
+XM4 OUT B net1 Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.75 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=2 m=2
+XM5 OUT AB net2 Vss sky130_fd_pr__nfet_01v8 L=0.15 W=0.75 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=2 m=2
+XM6 OUT A net3 Vss sky130_fd_pr__nfet_01v8 L=0.15 W=0.75 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=2 m=2
+XM7 net2 BB Vss Vss sky130_fd_pr__nfet_01v8 L=0.15 W=0.75 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=2 m=2
+XM8 net3 B Vss Vss sky130_fd_pr__nfet_01v8 L=0.15 W=0.75 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=2 m=2
+x1 Vdd A AB Vss Inversor
+x2 Vdd B BB Vss Inversor
+**.ends
+
+* expanding   symbol:  Inversor/Inversor.sym # of pins=4
+** sym_path: /home/designer/icdesign/sch//Inversor/Inversor.sym
+** sch_path: /home/designer/icdesign/sch//Inversor/Inversor.sch
+.subckt Inversor  Vdd IN OUT Vss
+*.ipin IN
+*.ipin Vdd
+*.ipin Vss
+*.opin OUT
+XM1 OUT IN Vss Vss sky130_fd_pr__nfet_01v8 L=0.15 W=0.75 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 OUT IN Vdd Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.75 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=2 m=2
+.ends
+
+.end
