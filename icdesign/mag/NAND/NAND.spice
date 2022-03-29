@@ -1,0 +1,31 @@
+* NGSPICE file created from NAND.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_XE8V5F a_n33_n75# a_63_n75# a_n125_n75# a_n63_n131#
++ VSUBS
+X0 a_63_n75# a_n63_n131# a_n33_n75# VSUBS sky130_fd_pr__nfet_01v8 ad=2.325e+11p pd=2.12e+06u as=2.475e+11p ps=2.16e+06u w=750000u l=150000u
+X1 a_n33_n75# a_n63_n131# a_n125_n75# VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=2.325e+11p ps=2.12e+06u w=750000u l=150000u
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_52C9FB w_n161_n175# a_n63_n106# a_n33_n75# a_63_n75#
++ a_n125_n75#
+X0 a_n33_n75# a_n63_n106# a_n125_n75# w_n161_n175# sky130_fd_pr__pfet_01v8 ad=2.475e+11p pd=2.16e+06u as=2.325e+11p ps=2.12e+06u w=750000u l=150000u
+X1 a_63_n75# a_n63_n106# a_n33_n75# w_n161_n175# sky130_fd_pr__pfet_01v8 ad=2.325e+11p pd=2.12e+06u as=0p ps=0u w=750000u l=150000u
+.ends
+
+.subckt pfet_w075_2f sky130_fd_pr__pfet_01v8_52C9FB_0/a_n33_n75# sky130_fd_pr__pfet_01v8_52C9FB_0/a_63_n75#
++ sky130_fd_pr__pfet_01v8_52C9FB_0/a_n125_n75# sky130_fd_pr__pfet_01v8_52C9FB_0/w_n161_n175#
++ sky130_fd_pr__pfet_01v8_52C9FB_0/a_n63_n106#
+Xsky130_fd_pr__pfet_01v8_52C9FB_0 sky130_fd_pr__pfet_01v8_52C9FB_0/w_n161_n175# sky130_fd_pr__pfet_01v8_52C9FB_0/a_n63_n106#
++ sky130_fd_pr__pfet_01v8_52C9FB_0/a_n33_n75# sky130_fd_pr__pfet_01v8_52C9FB_0/a_63_n75#
++ sky130_fd_pr__pfet_01v8_52C9FB_0/a_n125_n75# sky130_fd_pr__pfet_01v8_52C9FB
+.ends
+
+
+* Top level circuit NAND
+
+Xsky130_fd_pr__nfet_01v8_XE8V5F_1 m1_184_611# m1_84_148# m1_84_148# A VSUBS sky130_fd_pr__nfet_01v8_XE8V5F
+Xsky130_fd_pr__nfet_01v8_XE8V5F_0 VSUBS m1_84_148# m1_84_148# B VSUBS sky130_fd_pr__nfet_01v8_XE8V5F
+Xpfet_w075_2f_0 m1_184_611# m1_88_679# m1_88_679# m1_88_679# A pfet_w075_2f
+Xpfet_w075_2f_1 m1_184_611# m1_88_679# m1_88_679# m1_88_679# B pfet_w075_2f
+.end
+
