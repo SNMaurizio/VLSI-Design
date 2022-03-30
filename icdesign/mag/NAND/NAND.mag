@@ -1,0 +1,50 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1648667964
+<< poly >>
+rect 142 851 268 881
+rect 334 851 460 881
+rect 140 316 172 640
+rect 331 317 364 639
+<< metal1 >>
+rect 88 679 130 923
+rect 184 641 227 818
+rect 279 678 321 922
+rect 376 641 419 818
+rect 471 676 513 936
+rect 184 611 419 641
+rect 84 320 318 350
+rect 84 148 128 320
+rect 180 14 224 288
+rect 276 112 318 320
+rect 376 142 419 611
+rect 468 112 510 284
+rect 276 82 510 112
+use 5umcell_template  5umcell_template_0 ~/icdesign/mag/Plantilla
+timestamp 1647017803
+transform 1 0 4 0 1 -16
+box -4 16 604 1000
+use pfet_w075_2f  pfet_w075_2f_0 ~/icdesign/mag/PFET_W075_2F
+timestamp 1648666716
+transform 1 0 236 0 1 570
+box 0 0 322 350
+use pfet_w075_2f  pfet_w075_2f_1
+timestamp 1648666716
+transform 1 0 44 0 1 570
+box 0 0 322 350
+use sky130_fd_pr__nfet_01v8_XE8V5F  sky130_fd_pr__nfet_01v8_XE8V5F_0
+timestamp 1648573634
+transform 1 0 203 0 1 216
+box -125 -131 125 101
+use sky130_fd_pr__nfet_01v8_XE8V5F  sky130_fd_pr__nfet_01v8_XE8V5F_1
+timestamp 1648573634
+transform 1 0 395 0 1 216
+box -125 -131 125 101
+<< labels >>
+rlabel poly 331 317 364 639 1 A
+rlabel space 376 142 419 820 1 OUT
+rlabel space 98 894 498 930 1 Vdd
+rlabel space 24 4 584 44 1 Vss
+rlabel poly 140 316 172 640 1 B
+<< end >>

@@ -1,0 +1,175 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1648668565
+<< nwell >>
+rect -831 484 -768 984
+rect -168 484 -105 984
+rect 495 877 559 984
+rect 495 484 558 549
+<< poly >>
+rect -334 851 849 881
+rect -334 635 -304 851
+rect 723 809 753 851
+rect 819 809 849 851
+rect 339 610 369 620
+rect 531 611 561 621
+rect 18 579 273 609
+rect 339 580 465 610
+rect 531 581 657 611
+rect 339 530 369 580
+rect 109 500 369 530
+rect -245 297 43 327
+rect 109 308 139 500
+rect 531 457 561 581
+rect 205 427 561 457
+rect 205 308 235 427
+rect 723 380 753 622
+rect 624 350 753 380
+rect 624 281 654 350
+rect 979 327 1009 446
+rect 1075 358 1105 573
+rect 816 297 1009 327
+<< metal1 >>
+rect -927 888 -684 936
+rect -264 888 -21 936
+rect -1105 594 -658 624
+rect -12 607 18 617
+rect -688 547 -658 594
+rect -133 577 20 607
+rect 94 599 133 788
+rect 189 629 230 911
+rect 401 888 640 936
+rect 284 823 519 853
+rect 284 599 328 823
+rect -133 547 -103 577
+rect -688 517 -103 547
+rect -12 530 18 577
+rect 94 569 328 599
+rect 382 540 425 795
+rect 478 599 519 823
+rect 573 654 614 888
+rect 671 823 905 853
+rect 671 599 714 823
+rect 478 569 714 599
+rect 764 591 807 791
+rect 862 632 905 823
+rect 764 561 1123 591
+rect 764 540 807 561
+rect -12 500 330 530
+rect 382 510 807 540
+rect 300 482 330 500
+rect 300 452 1015 482
+rect -1268 393 252 423
+rect 417 368 766 398
+rect 417 340 447 368
+rect 736 340 766 368
+rect -600 288 -188 327
+rect -40 310 193 340
+rect -40 132 3 310
+rect -849 0 -750 46
+rect -186 0 -87 46
+rect 54 9 97 282
+rect 150 104 193 310
+rect 249 310 447 340
+rect 475 310 708 340
+rect 736 310 1117 340
+rect 249 138 289 310
+rect 345 104 385 282
+rect 475 138 518 310
+rect 150 74 385 104
+rect 570 46 613 278
+rect 665 104 708 310
+rect 762 137 803 310
+rect 860 104 900 275
+rect 665 74 900 104
+rect 479 9 613 46
+rect 479 0 574 9
+use 5umcell_template  5umcell_template_0 ~/icdesign/mag/Plantilla
+timestamp 1647017803
+transform 1 0 -105 0 1 -16
+box -4 16 604 1000
+use 5umcell_template  5umcell_template_1
+timestamp 1647017803
+transform 1 0 558 0 1 -16
+box -4 16 604 1000
+use Inversor  Inversor_0 ~/icdesign/mag/Inversor
+timestamp 1648667833
+transform 1 0 -772 0 1 0
+box 0 0 608 984
+use Inversor  Inversor_1
+timestamp 1648667833
+transform 1 0 -1435 0 1 0
+box 0 0 608 984
+use pfet_w075_2f  pfet_w075_2f_0 ~/icdesign/mag/PFET_W075_2F
+timestamp 1648666716
+transform 1 0 49 0 1 528
+box 0 0 322 350
+use pfet_w075_2f  pfet_w075_2f_1
+timestamp 1648666716
+transform 1 0 241 0 1 528
+box 0 0 322 350
+use pfet_w075_2f  pfet_w075_2f_2
+timestamp 1648666716
+transform 1 0 433 0 1 528
+box 0 0 322 350
+use pfet_w075_2f  pfet_w075_2f_3
+timestamp 1648666716
+transform 1 0 625 0 1 528
+box 0 0 322 350
+use sky130_fd_pr__nfet_01v8_XE8V5F  sky130_fd_pr__nfet_01v8_XE8V5F_0
+timestamp 1648583825
+transform 1 0 76 0 1 207
+box -125 -131 125 101
+use sky130_fd_pr__nfet_01v8_XE8V5F  sky130_fd_pr__nfet_01v8_XE8V5F_1
+timestamp 1648583825
+transform 1 0 268 0 1 207
+box -125 -131 125 101
+use sky130_fd_pr__nfet_01v8_XE8V5F  sky130_fd_pr__nfet_01v8_XE8V5F_2
+timestamp 1648583825
+transform 1 0 783 0 1 207
+box -125 -131 125 101
+use sky130_fd_pr__nfet_01v8_XE8V5F  sky130_fd_pr__nfet_01v8_XE8V5F_3
+timestamp 1648583825
+transform 1 0 591 0 1 207
+box -125 -131 125 101
+use via  via_0 ~/icdesign/mag/Via
+timestamp 1647641870
+transform 1 0 928 0 1 267
+box 31 179 97 245
+use via  via_1
+timestamp 1647641870
+transform 1 0 -63 0 1 378
+box 31 179 97 245
+use via  via_2
+timestamp 1647641870
+transform -1 0 1154 0 -1 553
+box 31 179 97 245
+use via  via_3
+timestamp 1647641870
+transform 1 0 1026 0 1 361
+box 31 179 97 245
+use via  via_4
+timestamp 1647641870
+transform 1 0 -1306 0 1 194
+box 31 179 97 245
+use via  via_5
+timestamp 1647641870
+transform 1 0 -643 0 1 96
+box 31 179 97 245
+use via  via_6
+timestamp 1647641870
+transform 1 0 -276 0 1 96
+box 31 179 97 245
+use via  via_7
+timestamp 1647641870
+transform 1 0 155 0 1 188
+box 31 179 97 245
+use via  via_8
+timestamp 1647641870
+transform 1 0 -950 0 1 194
+box 31 179 97 245
+<< labels >>
+rlabel space -85 4 475 44 1 Vss
+rlabel space -11 894 389 930 1 Vdd
+<< end >>

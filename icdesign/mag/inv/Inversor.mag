@@ -1,0 +1,59 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1646772087
+<< nwell >>
+rect -81 -313 253 83
+<< psubdiff >>
+rect -45 -667 -21 -603
+rect 193 -667 217 -603
+<< nsubdiff >>
+rect -45 35 217 47
+rect -45 -6 14 35
+rect 157 -6 217 35
+rect -45 -18 217 -6
+<< psubdiffcont >>
+rect -21 -667 193 -603
+<< nsubdiffcont >>
+rect 14 -6 157 35
+<< locali >>
+rect -37 44 209 47
+rect -37 -15 -27 44
+rect 199 -15 209 44
+rect -37 -17 209 -15
+rect -37 -667 -21 -603
+rect 193 -667 209 -603
+<< viali >>
+rect -27 35 199 44
+rect -27 -6 14 35
+rect 14 -6 157 35
+rect 157 -6 199 35
+rect -27 -15 199 -6
+rect -11 -663 185 -608
+<< metal1 >>
+rect -39 44 211 50
+rect -39 -15 -27 44
+rect 199 -15 211 44
+rect -39 -21 211 -15
+rect 20 -209 61 -21
+rect 46 -418 123 -253
+rect 21 -602 61 -455
+rect 152 -540 192 -122
+rect -23 -608 197 -602
+rect -23 -663 -11 -608
+rect 185 -663 197 -608
+rect -23 -669 197 -663
+use sky130_fd_pr__nfet_01v8_PDE3P4  sky130_fd_pr__nfet_01v8_PDE3P4_0
+timestamp 1646770120
+transform 1 0 85 0 1 -464
+box -73 -102 73 102
+use sky130_fd_pr__pfet_01v8_A9BS5R  sky130_fd_pr__pfet_01v8_A9BS5R_0
+timestamp 1646770120
+transform 1 0 85 0 1 -203
+box -109 -109 109 143
+<< labels >>
+rlabel nwell 20 -212 61 -15 1 Vdd
+rlabel space 21 -608 61 -450 1 Vss
+rlabel metal1 46 -418 123 -253 1 IN
+rlabel metal1 152 -540 192 -122 1 OUT
+<< end >>
