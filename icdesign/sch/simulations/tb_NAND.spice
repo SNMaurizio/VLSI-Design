@@ -1,0 +1,65 @@
+** sch_path: /home/designer/icdesign/sch//NAND/tb_NAND.sch
+**.subckt tb_NAND
+V1 Vss GND DC{vss}
+V2 Vdd Vss DC{vdd}
+V3 INA Vss PULSE({vdd} {vss} 0 1p 1p {TClk/4} {TClk/2})DC 0 AC 0
+V4 INB Vss PULSE({vdd} {vss} {TClk/8} 1p 1p {TClk/4} {TClk/2})DC 0 AC 0
+x1 Vdd INA INB outNAND Vss NAND
+**** begin user architecture code
+
+
+
+
+
+* Circuit Parameters
+.param vdd  = 1.8
+.param vss  = 0.0
+.param Tclk = 10n
+.options TEMP = 65.0
+
+
+* Include Models
+.lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/corners/sky130.lib TT
+
+
+* OP Parameters & Singals to save
+.save all
+
+
+*Simulations
+.control
+  tran 0.01u 100n
+  setplot tran1
+  plot v(INA)v(INB)+2 v(outNAND)+4
+.endc
+.end
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  NAND/NAND.sym # of pins=5
+** sym_path: /home/designer/icdesign/sch//NAND/NAND.sym
+** sch_path: /home/designer/icdesign/sch//NAND/NAND.sch
+.subckt NAND  Vdd A B OUT Vss
+*.ipin A
+*.ipin B
+*.ipin Vdd
+*.ipin Vss
+*.opin OUT
+XM1 net1 B Vss Vss sky130_fd_pr__nfet_01v8 L=0.15 W=0.75 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=2 m=2
+XM2 OUT A net1 Vss sky130_fd_pr__nfet_01v8 L=0.15 W=0.75 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=2 m=2
+XM5 OUT B Vdd Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.75 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=2 m=2
+XM4 OUT A Vdd Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.75 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=2 m=2
+.ends
+
+.GLOBAL GND
+.end
