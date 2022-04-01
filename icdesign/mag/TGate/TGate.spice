@@ -1,0 +1,29 @@
+* NGSPICE file created from TGate.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_SJ5Z6H a_15_n75# a_n15_n101# a_n73_n75# VSUBS
+X0 a_15_n75# a_n15_n101# a_n73_n75# VSUBS sky130_fd_pr__nfet_01v8 ad=2.175e+11p pd=2.08e+06u as=2.175e+11p ps=2.08e+06u w=750000u l=150000u
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_52C9FB a_33_n106# w_n161_n175# a_n63_n106# a_n33_n75#
++ a_63_n75# a_n125_n75#
+X0 a_n33_n75# a_n63_n106# a_n125_n75# w_n161_n175# sky130_fd_pr__pfet_01v8 ad=2.475e+11p pd=2.16e+06u as=2.325e+11p ps=2.12e+06u w=750000u l=150000u
+X1 a_63_n75# a_33_n106# a_n33_n75# w_n161_n175# sky130_fd_pr__pfet_01v8 ad=2.325e+11p pd=2.12e+06u as=0p ps=0u w=750000u l=150000u
+.ends
+
+.subckt pfet_w075_2f sky130_fd_pr__pfet_01v8_52C9FB_0/a_63_n75# sky130_fd_pr__pfet_01v8_52C9FB_0/a_n33_n75#
++ sky130_fd_pr__pfet_01v8_52C9FB_0/a_n125_n75# sky130_fd_pr__pfet_01v8_52C9FB_0/w_n161_n175#
++ sky130_fd_pr__pfet_01v8_52C9FB_0/a_33_n106# sky130_fd_pr__pfet_01v8_52C9FB_0/a_n63_n106#
+Xsky130_fd_pr__pfet_01v8_52C9FB_0 sky130_fd_pr__pfet_01v8_52C9FB_0/a_33_n106# sky130_fd_pr__pfet_01v8_52C9FB_0/w_n161_n175#
++ sky130_fd_pr__pfet_01v8_52C9FB_0/a_n63_n106# sky130_fd_pr__pfet_01v8_52C9FB_0/a_n33_n75#
++ sky130_fd_pr__pfet_01v8_52C9FB_0/a_63_n75# sky130_fd_pr__pfet_01v8_52C9FB_0/a_n125_n75#
++ sky130_fd_pr__pfet_01v8_52C9FB
+.ends
+
+
+* Top level circuit TGate
+
+Xsky130_fd_pr__nfet_01v8_SJ5Z6H_0 a_499_201# a_281_274# IN VSUBS sky130_fd_pr__nfet_01v8_SJ5Z6H
+Xpfet_w075_2f_0 IN a_499_201# IN 5umcell_template_0/w_n4_500# a_280_825# a_280_825#
++ pfet_w075_2f
+.end
+

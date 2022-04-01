@@ -1,0 +1,50 @@
+* NGSPICE file created from Xor.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_NDWVGB a_15_n75# a_n15_n101# a_n73_n75# VSUBS
+X0 a_15_n75# a_n15_n101# a_n73_n75# VSUBS sky130_fd_pr__nfet_01v8 ad=2.175e+11p pd=2.08e+06u as=2.175e+11p ps=2.08e+06u w=750000u l=150000u
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_52C9FB a_33_n106# w_n161_n175# a_n63_n106# a_n33_n75#
++ a_63_n75# a_n125_n75#
+X0 a_n33_n75# a_n63_n106# a_n125_n75# w_n161_n175# sky130_fd_pr__pfet_01v8 ad=2.475e+11p pd=2.16e+06u as=2.325e+11p ps=2.12e+06u w=750000u l=150000u
+X1 a_63_n75# a_33_n106# a_n33_n75# w_n161_n175# sky130_fd_pr__pfet_01v8 ad=2.325e+11p pd=2.12e+06u as=0p ps=0u w=750000u l=150000u
+.ends
+
+.subckt pfet_w075_2f sky130_fd_pr__pfet_01v8_52C9FB_0/a_63_n75# sky130_fd_pr__pfet_01v8_52C9FB_0/a_n33_n75#
++ sky130_fd_pr__pfet_01v8_52C9FB_0/a_n125_n75# sky130_fd_pr__pfet_01v8_52C9FB_0/w_n161_n175#
++ sky130_fd_pr__pfet_01v8_52C9FB_0/a_33_n106# sky130_fd_pr__pfet_01v8_52C9FB_0/a_n63_n106#
+Xsky130_fd_pr__pfet_01v8_52C9FB_0 sky130_fd_pr__pfet_01v8_52C9FB_0/a_33_n106# sky130_fd_pr__pfet_01v8_52C9FB_0/w_n161_n175#
++ sky130_fd_pr__pfet_01v8_52C9FB_0/a_n63_n106# sky130_fd_pr__pfet_01v8_52C9FB_0/a_n33_n75#
++ sky130_fd_pr__pfet_01v8_52C9FB_0/a_63_n75# sky130_fd_pr__pfet_01v8_52C9FB_0/a_n125_n75#
++ sky130_fd_pr__pfet_01v8_52C9FB
+.ends
+
+.subckt Inversor a_437_201# m1_299_677# VSUBS a_160_851#
+Xsky130_fd_pr__nfet_01v8_NDWVGB_0 a_437_201# a_160_851# VSUBS VSUBS sky130_fd_pr__nfet_01v8_NDWVGB
+Xpfet_w075_2f_0 m1_299_677# a_437_201# m1_299_677# m1_299_677# a_160_851# a_160_851#
++ pfet_w075_2f
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_XE8V5F a_n33_n75# a_63_n75# a_n125_n75# a_n63_n131#
++ VSUBS
+X0 a_63_n75# a_n63_n131# a_n33_n75# VSUBS sky130_fd_pr__nfet_01v8 ad=2.325e+11p pd=2.12e+06u as=2.475e+11p ps=2.16e+06u w=750000u l=150000u
+X1 a_n33_n75# a_n63_n131# a_n125_n75# VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=2.325e+11p ps=2.12e+06u w=750000u l=150000u
+.ends
+
+
+* Top level circuit Xor
+
+XInversor_0 a_624_281# m1_573_654# VSUBS a_109_308# Inversor
+XInversor_1 a_18_579# m1_573_654# VSUBS a_205_308# Inversor
+Xsky130_fd_pr__nfet_01v8_XE8V5F_1 OUT m1_n40_132# m1_n40_132# a_205_308# VSUBS sky130_fd_pr__nfet_01v8_XE8V5F
+Xsky130_fd_pr__nfet_01v8_XE8V5F_0 VSUBS m1_n40_132# m1_n40_132# a_109_308# VSUBS sky130_fd_pr__nfet_01v8_XE8V5F
+Xsky130_fd_pr__nfet_01v8_XE8V5F_2 OUT m1_475_138# m1_475_138# a_18_579# VSUBS sky130_fd_pr__nfet_01v8_XE8V5F
+Xsky130_fd_pr__nfet_01v8_XE8V5F_3 VSUBS m1_475_138# m1_475_138# a_624_281# VSUBS sky130_fd_pr__nfet_01v8_XE8V5F
+Xpfet_w075_2f_1 m1_94_569# OUT m1_94_569# m1_573_654# a_109_308# a_109_308# pfet_w075_2f
+Xpfet_w075_2f_0 m1_94_569# m1_573_654# m1_94_569# m1_573_654# a_18_579# a_18_579#
++ pfet_w075_2f
+Xpfet_w075_2f_2 m1_94_569# m1_573_654# m1_94_569# m1_573_654# a_205_308# a_205_308#
++ pfet_w075_2f
+Xpfet_w075_2f_3 m1_94_569# OUT m1_94_569# m1_573_654# a_624_281# a_624_281# pfet_w075_2f
+.end
+

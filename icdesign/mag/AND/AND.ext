@@ -1,0 +1,31 @@
+timestamp 1648821438
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use NAND NAND_0 1 0 -273 0 1 478
+use Inversor Inversor_0 1 0 335 0 1 478
+use via via_0 1 0 398 0 1 712
+node "m1_109_893#" 1 198.785 109 893 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 23870 894 0 0 0 0 0 0 0 0 0 0
+node "li_293_478#" 22 71.456 293 478 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3520 248 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_269_1370#" 39 97.136 269 1370 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5120 336 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "Inversor_0/sky130_fd_pr__nfet_01v8_NDWVGB_0/a_15_n75#" "NAND_0/5umcell_template_0/w_n4_500#" 40.2678
+cap "NAND_0/m1_184_611#" "NAND_0/5umcell_template_0/a_26_16#" 68.9494
+cap "NAND_0/A" "NAND_0/m1_184_611#" 14.4032
+cap "Inversor_0/sky130_fd_pr__nfet_01v8_NDWVGB_0/a_15_n75#" "NAND_0/sky130_fd_pr__nfet_01v8_XE8V5F_0/a_n125_n75#" 35.9741
+cap "NAND_0/m1_184_611#" "NAND_0/5umcell_template_0/w_n4_500#" 67.2456
+cap "NAND_0/m1_184_611#" "Inversor_0/sky130_fd_pr__nfet_01v8_NDWVGB_0/a_15_n75#" 50.0547
+cap "NAND_0/m1_184_611#" "NAND_0/sky130_fd_pr__nfet_01v8_XE8V5F_0/a_n125_n75#" 23.9708
+cap "NAND_0/sky130_fd_pr__nfet_01v8_XE8V5F_0/a_n125_n75#" "NAND_0/5umcell_template_0/a_26_16#" 70.8658
+merge "via_0/VSUBS" "Inversor_0/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "Inversor_0/VSUBS" "NAND_0/VSUBS"
+merge "NAND_0/VSUBS" "VSUBS"
+merge "Inversor_0/pfet_w075_2f_0/sky130_fd_pr__pfet_01v8_52C9FB_0/w_n161_n175#" "NAND_0/5umcell_template_0/w_n4_500#" -26.736 0 0 0 0 0 -1000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -160 0 0 0 0 0 0 0 0 0 0 0 0
+merge "NAND_0/5umcell_template_0/w_n4_500#" "li_269_1370#"
+merge "Inversor_0/5umcell_template_0/a_26_16#" "NAND_0/5umcell_template_0/a_26_16#" -24.8512 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -176 0 0 0 0 0 0 0 0 0 0 0 0
+merge "NAND_0/5umcell_template_0/a_26_16#" "li_293_478#"
+merge "via_0/sky130_fd_pr__nfet_01v8_78R7PC_0/a_n33_66#" "Inversor_0/a_160_274#" -122.741 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -132 0 0 0 0 -6137 -446 0 0 0 0 0 0 0 0 0 0
+merge "Inversor_0/a_160_274#" "NAND_0/m1_184_611#"
+merge "NAND_0/m1_184_611#" "m1_109_893#"

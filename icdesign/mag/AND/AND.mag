@@ -1,0 +1,22 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1648852585
+<< locali >>
+rect 269 1370 397 1410
+rect 293 478 373 522
+<< metal1 >>
+rect 109 893 494 955
+use Inversor  Inversor_0 ~/icdesign/mag/Inversor
+timestamp 1648821604
+transform 1 0 335 0 1 478
+box 0 -2 608 984
+use NAND  NAND_0 ~/icdesign/mag/NAND
+timestamp 1648821021
+transform 1 0 -273 0 1 478
+box 0 -2 608 984
+use via  via_0 ~/icdesign/mag/Via
+timestamp 1647641870
+transform 1 0 398 0 1 712
+box 31 179 97 245
+<< end >>
