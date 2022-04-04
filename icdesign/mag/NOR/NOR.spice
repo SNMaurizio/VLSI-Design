@@ -1,0 +1,35 @@
+* NGSPICE file created from NOR.ext - technology: sky130A
+
+.subckt sky130_fd_pr__pfet_01v8_524U5B a_n159_n106# a_159_n75# a_n221_n75# a_n33_n75#
++ a_63_n75# a_n129_n75# w_n257_n175#
+X0 a_n33_n75# a_n159_n106# a_n129_n75# w_n257_n175# sky130_fd_pr__pfet_01v8 ad=2.475e+11p pd=2.16e+06u as=2.475e+11p ps=2.16e+06u w=750000u l=150000u
+X1 a_159_n75# a_n159_n106# a_63_n75# w_n257_n175# sky130_fd_pr__pfet_01v8 ad=2.325e+11p pd=2.12e+06u as=2.475e+11p ps=2.16e+06u w=750000u l=150000u
+X2 a_n129_n75# a_n159_n106# a_n221_n75# w_n257_n175# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=2.325e+11p ps=2.12e+06u w=750000u l=150000u
+X3 a_63_n75# a_n159_n106# a_n33_n75# w_n257_n175# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=750000u l=150000u
+.ends
+
+.subckt pfet_w075_4f sky130_fd_pr__pfet_01v8_524U5B_0/a_n221_n75# sky130_fd_pr__pfet_01v8_524U5B_0/a_n33_n75#
++ sky130_fd_pr__pfet_01v8_524U5B_0/a_n129_n75# sky130_fd_pr__pfet_01v8_524U5B_0/w_n257_n175#
++ sky130_fd_pr__pfet_01v8_524U5B_0/a_n159_n106# sky130_fd_pr__pfet_01v8_524U5B_0/a_63_n75#
++ sky130_fd_pr__pfet_01v8_524U5B_0/a_159_n75#
+Xsky130_fd_pr__pfet_01v8_524U5B_0 sky130_fd_pr__pfet_01v8_524U5B_0/a_n159_n106# sky130_fd_pr__pfet_01v8_524U5B_0/a_159_n75#
++ sky130_fd_pr__pfet_01v8_524U5B_0/a_n221_n75# sky130_fd_pr__pfet_01v8_524U5B_0/a_n33_n75#
++ sky130_fd_pr__pfet_01v8_524U5B_0/a_63_n75# sky130_fd_pr__pfet_01v8_524U5B_0/a_n129_n75#
++ sky130_fd_pr__pfet_01v8_524U5B_0/w_n257_n175# sky130_fd_pr__pfet_01v8_524U5B
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_SJ5Z6H a_15_n75# a_n15_n101# a_n73_n75# VSUBS
+X0 a_15_n75# a_n15_n101# a_n73_n75# VSUBS sky130_fd_pr__nfet_01v8 ad=2.175e+11p pd=2.08e+06u as=2.175e+11p ps=2.08e+06u w=750000u l=150000u
+.ends
+
+
+* Top level circuit NOR
+
+Xpfet_w075_4f_0 m1_518_670# m1_518_670# m1_232_611# m1_518_670# a_478_273# m1_232_611#
++ m1_518_670# pfet_w075_4f
+Xpfet_w075_4f_1 m1_232_611# m1_232_611# m1_836_592# m1_518_670# a_794_351# m1_836_592#
++ m1_232_611# pfet_w075_4f
+Xsky130_fd_pr__nfet_01v8_SJ5Z6H_2 m1_836_592# a_478_273# VSUBS VSUBS sky130_fd_pr__nfet_01v8_SJ5Z6H
+Xsky130_fd_pr__nfet_01v8_SJ5Z6H_3 VSUBS a_794_351# m1_836_592# VSUBS sky130_fd_pr__nfet_01v8_SJ5Z6H
+.end
+

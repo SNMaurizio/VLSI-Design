@@ -1,0 +1,74 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1649101816
+<< poly >>
+rect 488 1118 518 1979
+rect 341 1088 703 1118
+rect 959 801 1126 831
+<< locali >>
+rect 469 1376 593 1416
+rect 493 484 569 528
+<< metal1 >>
+rect 1171 2734 1386 2787
+rect 1062 2660 1545 2702
+rect -1838 2462 -1808 2548
+rect -1871 2432 -1808 2462
+rect -1871 1557 -1841 2432
+rect 1551 2358 1784 2405
+rect 484 1985 967 2015
+rect 937 1969 967 1985
+rect 937 1939 1320 1969
+rect -1794 1854 -1680 1907
+rect -1873 1527 -1841 1557
+rect -1873 1073 -1843 1527
+rect -1801 1386 1637 1505
+rect -78 1001 871 1031
+rect -78 972 -48 1001
+rect -264 942 -48 972
+rect 1116 801 1693 831
+rect 1507 628 1684 675
+rect 1041 482 1229 530
+rect 1732 528 1784 2358
+rect 1575 481 1784 528
+use AND  AND_0 ~/icdesign/mag/AND
+timestamp 1649082257
+transform 1 0 804 0 1 6
+box -273 476 943 1462
+use FFD  FFD_0 ~/icdesign/mag/FFD
+timestamp 1648927829
+transform 1 0 -1901 0 1 2356
+box 0 -938 3644 986
+use Xor  Xor_0 ~/icdesign/mag/Xor
+timestamp 1649082257
+transform -1 0 -794 0 1 484
+box -1325 -2 1107 984
+use via  via_0 ~/icdesign/mag/Via
+timestamp 1647641870
+transform 1 0 -298 0 1 731
+box 31 179 97 245
+use via  via_1
+timestamp 1647641870
+transform 1 0 780 0 1 822
+box 31 179 97 245
+use via  via_2
+timestamp 1647641870
+transform 1 0 1041 0 1 604
+box 31 179 97 245
+use via  via_4
+timestamp 1647641870
+transform 1 0 421 0 1 1789
+box 31 179 97 245
+use via  via_5
+timestamp 1647641870
+transform 1 0 1228 0 1 1750
+box 31 179 97 245
+<< labels >>
+rlabel metal1 1116 801 1693 831 1 CE
+rlabel metal1 1171 2734 1386 2787 1 CLR
+rlabel metal1 -1794 1854 -1680 1907 1 CLK
+rlabel metal1 1062 2660 1545 2702 1 Dn
+rlabel metal1 -1801 1386 1637 1505 1 VDD
+rlabel metal1 1041 482 1229 530 1 VSS
+rlabel metal1 1507 628 1684 675 1 Sout
+<< end >>
