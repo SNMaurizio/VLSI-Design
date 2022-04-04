@@ -1,9 +1,0 @@
-magic
-tech sky130A
-magscale 1 2
-timestamp 1648564940
-use sky130_fd_pr__nfet_01v8_XU5EQA  sky130_fd_pr__nfet_01v8_XU5EQA_0
-timestamp 1648564940
-transform 1 0 125 0 1 163
-box -125 -131 125 101
-<< end >>
